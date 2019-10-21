@@ -1,4 +1,4 @@
-.degree_symbol:not(:empty)::after {
+/* .degree_symbol:not(:empty)::after {
     content: "°"
 }
 
@@ -10,3 +10,59 @@
 	width: 600px;
     height: 600px;
 }
+ */
+
+ body {
+     background-color: #5B618A;
+ }
+
+ p {
+     font-family: 'Fira Sans', sans-serif;
+     font-weight: 300;
+     color: white;
+     line-height: .8em;
+ }
+
+ b {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    color: white;
+ }
+
+ h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+ }
+
+ .time {
+     text-align: center;
+     font-weight: 300;
+     font-size: 14px;
+ }
+
+ .current_details {
+    background-color: pink;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+    
+ }
+
+ .current_temp {
+
+ }
+
+ .temp_current {
+
+ }
+ 
+ .alerts {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+ }

@@ -22,7 +22,9 @@
         <script src="/js/libraries/leaflet/leaflet-openweathermap.js"></script>
         <script src="/js/libraries/leaflet/leaflet-languageselector.js"></script>
 
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/style.css">
+    
     </head>
 
     <body>
@@ -34,7 +36,7 @@
 
 
         <div class="results" id="app">
-            <h1>TIME</h1>
+            <!-- <h1>TIME</h1>
             <p>{{time.day}}</p>
             <p>{{time.date}}</p>
             <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
@@ -102,10 +104,168 @@
             <p>{{forecast[0].snow}}</p>
 
             <p>{{forecast[0].dewpt}}</p>
-            <p>{{forecast[0].pres}} mb</p>
+            <p>{{forecast[0].pres}} mb</p> -->
 
         </div>
         <div id="map"></div>
+        <h1>
+            Manhattan, Kansas
+        </h1>
+        <p class="time">as of 11:00 am</p>
+        <div class="current_details">
+            <div class="current_temp">
+                <p class="temp_current">50°</p>
+                <p>feels like 48°</p>
+            </div>
+            <div class="details">
+                <p><b>Partly Cloudly</b></p>
+                <p>UV index <b>3 of 10</b></p>
+                <p>Wind <b>NNW 6MPH</b></p>
+                <p>Humidity <b>57%</b></p>
+                <p>Sunrise <b>7:14 am</b> Sunset <b>6:26 pm</b></p>
+                <p>Moon phase <b>Waning Gibbous</b></p>
+            </div>
+        </div>
+        <p class="alerts">There are no current alerts in your area</p>
+        <p>DAILY</p>
+        <div class="daily">
+            <div class="monday">
+                <p>monday</p>
+                <p>62°</p>
+                <p>57°</p>
+                <img src="">
+                <p><b>Partly Cloudy</b></p>
+                <p><b>20% rain</b></p>
+                <p><b>8 UV</b></p>
+            </div>
+            <div class="tuesday">
+                <p>tuesday</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p><b>Partly Cloudy</b></p>
+                <p><b>30% rain</b></p>
+                <p><b>6 UV</b></p>
+            </div>
+            <div class="wednesday">
+                <p>wednesday</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p><b>Sunny</b></p>
+                <p><b>0% rain</b></p>
+                <p><b>4 UV</b></p>
+            </div>
+            <div class="thursday">
+                <p>thursday</p>
+                <p>68°</p>
+                <p>50°</p>
+                <img src="">
+                <p><b>Partly Cloudy</b></p>
+                <p><b>40% rain</b></p>
+                <p><b>6 UV</b></p>
+            </div>
+            <div class="friday">
+                <p>friday</p>
+                <p>67°</p>
+                <p>45°</p>
+                <img src="">
+                <p><b>Sunny</b></p>
+                <p><b>0% rain</b></p>
+                <p><b>7 UV</b></p>
+            </div>
+            <div class="saturday">
+                <p>saturday</p>
+                <p>85°</p>
+                <p>70°</p>
+                <img src="">
+                <p><b>Sunny</b></p>
+                <p><b>0% rain</b></p>
+                <p><b>10 UV</b></p>
+            </div>
+            <div class="sunday">
+                <p>sunday</p>
+                <p>70°</p>
+                <p>62°</p>
+                <img src="">
+                <p><b>Rainy</b></p>
+                <p><b>70% rain</b></p>
+                <p><b>4 UV</b></p>
+            </div>
+        </div>
+        <p>CURRENY DETAILS</p>
+        <div class="current details">
+            <p>Visibility <b>10 miles</b></p>
+            <p>Pressure <b>30.26</b></p>
+            <p>Dew Point <b>35°</b></p>
+        </div>
+        <div class="map"></div>
+        <p>HOURLY</p>
+        <div class="hourly">
+            <div class="12:00am">
+                <p>12:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="1:00am">
+                <p>1:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="2:00am">
+                <p>2:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="3:00am">
+                <p>3:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="4:00am">
+                <p>4:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="5:00am">
+                <p>5:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="6:00am">
+                <p>6:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="7:00am">
+                <p>7:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+            <div class="8:00am">
+                <p>8:00am</p>
+                <p>60°</p>
+                <p>45°</p>
+                <img src="">
+                <p>20%</p>
+            </div>
+        </div>
 
 
 
