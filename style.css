@@ -63,9 +63,9 @@
 
  .temp_current {
     font-weight: 600;
-    font-size: 140px;
+    font-size: 200px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     padding-right: 10px;
  }
 
@@ -128,6 +128,25 @@
     padding-top: 21vw;
 }
 
+.rain_chance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40px;
+    margin: auto;
+}
+
+.rain_drop {
+    background-image: url("/img/Asset\ 4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hourly_rain_drop {
+    background-image: url("/img/Asset\ 7.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .current_details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -156,7 +175,7 @@
 .hourly {
     width: 178vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 1em;
     text-align: center;
     margin-top: 35px;
@@ -189,23 +208,17 @@
     margin-top: 10px;
 }
 
-.hour_low {
-    color: #5B618A;
-    font-size: 20px;
-    margin-bottom: 0px;
-    margin-top: 10px;
-}
-
 .rain {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1em;
+    grid-column-gap: ;
     width: 80px;
+    height: 50px;
     margin: auto;
 }
 
 .hour_rain {
     color: #5B618A;
     font-size: 12px;
-    margin-bottom: 20px;
+    margin: auto;
 }

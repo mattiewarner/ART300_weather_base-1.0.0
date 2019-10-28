@@ -36,295 +36,306 @@
 
 
         <div class="results" id="app">
-            <!-- <h1>TIME</h1>
-            <p>{{time.day}}</p>
-            <p>{{time.date}}</p>
-            <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
-            <p>{{time.moom}}</p>
+                <!-- <h1>TIME</h1>
+                <p>{{time.day}}</p>
+                <p>{{time.date}}</p>
+                <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
+                <p>{{time.moom}}</p>
 
-            <h1>META</h1>
-            <p>{{city}}</p>
+                <h1>META</h1>
+                <p>{{city}}</p>
 
-            <p>{{location.zip}}</p>
-            <p>{{location.coord.lat}}</p>
-            <p>{{location.coord.lon}}</p>
-            <p>{{location.name}}</p>
+                <p>{{location.zip}}</p>
+                <p>{{location.coord.lat}}</p>
+                <p>{{location.coord.lon}}</p>
+                <p>{{location.name}}</p>
 
-            <p>{{error}}</p>
-
-
-            <h1>CURRENT</h1>
-            <p>{{current.description_main}}</p>
-            <p>{{current.description_long}}</p>
-            <p>{{current.description_icon}}</p>
-
-            <p class="degree_symbol">{{current.temp.current}}</p>
-            <p class="degree_symbol">{{current.temp.high}}</p>
-            <p class="degree_symbol">{{current.temp.low}}</p>
-
-            <p>{{current.wind.speed}}</p>
-            <p class="degree_symbol">{{current.wind.degree}}</p>
-            <p>{{current.cloud_cover}}</p>
-
-            <p>{{current.rain}}</p>
-            <p>{{current.snow}}</p>
-
-            <p>{{current.sunrise}}</p>
-            <p>{{current.sunset}}</p>
+                <p>{{error}}</p>
 
 
-            <h1>HOURLY</h1>
-            <h4>Hour 1</h4>
-            <p>{{hourly[0].isDaytime ? 'Day' : 'Night' }}</p>
-            <p>{{hourly[0].number}}</p>
-            <p>{{hourly[0].shortForecast}}</p>
-            <p>{{hourly[0].startTime}}</p>
-            <p class="degree_symbol">{{hourly[0].temperature}}</p>
-            <p>{{hourly[0].emperatureTrend}}</p>
-            <p>{{hourly[0].windSpeed}}</p>
-            <p>{{hourly[0].windDirection}}</p>
+                <h1>CURRENT</h1>
+                <p>{{current.description_main}}</p>
+                <p>{{current.description_long}}</p>
+                <p>{{current.description_icon}}</p>
 
-            <h1>FORECAST</h1>
-            <h4>Day 1</h4>
-            <p  class="degree_symbol">High - {{forecast[0].max_temp}}</p>
-            <p  class="degree_symbol">Low - {{forecast[0].min_temp}}</p>
-            <p>{{forecast[0].uv}}</p>
-            <p>{{forecast[0].weather.description}}</p>
+                <p class="degree_symbol">{{current.temp.current}}</p>
+                <p class="degree_symbol">{{current.temp.high}}</p>
+                <p class="degree_symbol">{{current.temp.low}}</p>
 
-            <p>{{forecast[0].wind_spd}} mph</p>
-            <p>{{forecast[0].wind_cdir_full}}</p>
-            <p>{{forecast[0].wind_cdir}}</p>
+                <p>{{current.wind.speed}}</p>
+                <p class="degree_symbol">{{current.wind.degree}}</p>
+                <p>{{current.cloud_cover}}</p>
 
-            <p>{{forecast[0].vis}}</p>
+                <p>{{current.rain}}</p>
+                <p>{{current.snow}}</p>
 
-            <p>{{forecast[0].pop}}</p>
+                <p>{{current.sunrise}}</p>
+                <p>{{current.sunset}}</p>
 
-            <p>{{forecast[0].precip}}</p>
 
-            <p>{{forecast[0].snow}}</p>
+                <h1>HOURLY</h1>
+                <h4>Hour 1</h4>
+                <p>{{hourly[0].isDaytime ? 'Day' : 'Night' }}</p>
+                <p>{{hourly[0].number}}</p>
+                <p>{{hourly[0].shortForecast}}</p>
+                <p>{{hourly[0].startTime}}</p>
+                <p class="degree_symbol">{{hourly[0].temperature}}</p>
+                <p>{{hourly[0].emperatureTrend}}</p>
+                <p>{{hourly[0].windSpeed}}</p>
+                <p>{{hourly[0].windDirection}}</p>
 
-            <p>{{forecast[0].dewpt}}</p>
-            <p>{{forecast[0].pres}} mb</p> -->
+                <h1>FORECAST</h1>
+                <h4>Day 1</h4>
+                <p  class="degree_symbol">High - {{forecast[0].max_temp}}</p>
+                <p  class="degree_symbol">Low - {{forecast[0].min_temp}}</p>
+                <p>{{forecast[0].uv}}</p>
+                <p>{{forecast[0].weather.description}}</p>
 
+                <p>{{forecast[0].wind_spd}} mph</p>
+                <p>{{forecast[0].wind_cdir_full}}</p>
+                <p>{{forecast[0].wind_cdir}}</p>
+
+                <p>{{forecast[0].vis}}</p>
+
+                <p>{{forecast[0].pop}}</p>
+
+                <p>{{forecast[0].precip}}</p>
+
+                <p>{{forecast[0].snow}}</p>
+
+                <p>{{forecast[0].dewpt}}</p>
+                <p>{{forecast[0].pres}} mb</p> -->
+
+            
+            <h1>
+                    {{location.name}}
+            </h1>
+            <p class="time">{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
+            <div class="current_temp_details">
+                <div class="current_temp">
+                    <p class="temp_current">{{current.temp.current}}°</p>
+                    <p class="feels">feels like 48°</p>
+                </div>
+                <div class="details">
+                    <p><b>{{current.description_main}}</b></p>
+                    <p>UV index <b>{{forecast[0].uv}}</b></p>
+                    <p>Wind <b>{{current.wind.speed}}</b></p>
+                    <p>Humidity <b>57%</b></p>
+                    <p>Snow <b>{{forecast[0].snow}}%</b></p>
+                    <p>Rain <b>{{forecast[0].precip}}%</b></p>
+                    <p>Sunrise <b>{{current.sunrise}}</b> Sunset <b>{{current.sunset}}</b></p>
+                    <p>Moon phase <b>{{time.moom}}</b></p>
+                </div>
+            </div>
+            <p class="alerts">There are no current alerts in your area</p>
+            <p class="days_title">DAILY</p>
+            <div class="days">
+                <div class="day">
+                    <p class="day_details">monday</p>
+                    <p class="day_high">{{forecast[0].max_temp}}°</p>
+                    <p class="day_low">{{forecast[0].min_temp}}°</p>
+                    <img src="img/Asset 3.png">
+                    <p class="day_details"><b>{{forecast[0].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[0].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[0].uv}} UV</b></p>
+                </div>
+                <div class="day">
+                    <p class="day_details">tuesday</p>
+                    <p class="day_high">{{forecast[1].max_temp}}°</p>
+                    <p class="day_low">{{forecast[1].min_temp}}°</p>
+                    <img src="img/Asset 3.png">
+                    <p class="day_details"><b>{{forecast[1].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[1].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[1].uv}} UV</b></p>
+                </div>
+                <div class="day">
+                    <p class="day_details">wednesday</p>
+                    <p class="day_high">{{forecast[2].max_temp}}°</p>
+                    <p class="day_low">{{forecast[2].min_temp}}°</p>
+                    <img src="img/Asset 1.png">
+                    <p class="day_details"><b>{{forecast[2].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[2].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[2].uv}} UV</b></p>
+                </div>
+                <div class="day">
+                    <p class="day_details">thursday</p>
+                    <p class="day_high">{{forecast[3].max_temp}}°</p>
+                    <p class="day_low">{{forecast[3].min_temp}}°</p>
+                    <img src="img/Asset 3.png">
+                    <p class="day_details"><b>{{forecast[3].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[3].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[3].uv}} UV</b></p>
+                </div>
+                <div class="day">
+                    <p class="day_details">friday</p>
+                    <p class="day_high">{{forecast[4].max_temp}}°</p>
+                    <p class="day_low">{{forecast[4].min_temp}}°</p>
+                    <img src="img/Asset 1.png">
+                    <p class="day_details"><b>{{forecast[4].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[4].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[4].uv}} UV</b></p>
+                </div>
+                <div class="day">
+                    <p class="day_details">saturday</p>
+                    <p class="day_high">{{forecast[5].max_temp}}°</p>
+                    <p class="day_low">{{forecast[5].min_temp}}°</p>
+                    <img src="img/Asset 1.png">
+                    <p class="day_details"><b>{{forecast[5].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[5].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[5].uv}} UV</b></p>
+                </div>
+                <div class="day">
+                    <p class="day_details">sunday</p>
+                    <p class="day_high">{{forecast[6].max_temp}}°</p>
+                    <p class="day_low">{{forecast[6].min_temp}}°</p>
+                    <img src="img/Asset 2.png">
+                    <p class="day_details"><b>{{forecast[6].weather.description}}</b></p>
+                    <div class="rain_chance">
+                        <div class="rain_drop"></div>
+                        <p class="day_details"><b>{{forecast[6].pop}}%</b></p>
+                    </div>
+                    <p class="day_details"><b>{{forecast[6].uv}} UV</b></p>
+                </div>
+            </div>
+            <p class="current_details_title">CURRENT DETAILS</p>
+            <div class="current_details">
+                <p>Visibility <b>{{forecast[0].vis}} miles</b></p>
+                <p>Pressure <b>{{forecast[0].pres}}mb</b></p>
+                <p>Dew Point <b>{{forecast[0].dewpt}}°</b></p>
+            </div>
+            <div id="map"></div>
+            <p class="hourly_title">HOURLY</p>
+            <div class="window">
+                <div class="hourly">
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[0].startTime}}</p>
+                        <p class="hour_high">{{hourly[0].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20% </p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[1].startTime}}</p>
+                        <p class="hour_high">{{hourly[1].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[2].startTime}}</p>
+                        <p class="hour_high">{{hourly[2].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[3].startTime}}</p>
+                        <p class="hour_high">{{hourly[3].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[4].startTime}}</p>
+                        <p class="hour_high">{{hourly[4].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[5].startTime}}</p>
+                        <p class="hour_high">{{hourly[5].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[6].startTime}}</p>
+                        <p class="hour_high">{{hourly[6].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[7].startTime}}</p>
+                        <p class="hour_high">{{hourly[7].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[8].startTime}}</p>
+                        <p class="hour_high">{{hourly[8].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[9].startTime}}</p>
+                        <p class="hour_high">{{hourly[9].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[10].startTime}}</p>
+                        <p class="hour_high">{{hourly[10].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <div class="hourly_time">
+                        <p class="hour_times">{{hourly[11].startTime}}</p>
+                        <p class="hour_high">{{hourly[11].temperature}}°</p>
+                        <div class="rain">
+                            <div class="hourly_rain_drop"></div>
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div>
+                    <!-- <div class="hourly_time">
+                        <p class="hour_times">{{hourly[11].startTime}}</p>
+                        <p class="hour_high">60°</p>
+                        <div class="rain">
+                            <img src="img/Asset 2.png">
+                            <p class="hour_rain">20%</p>
+                        </div>
+                    </div> -->
+            </div>
+            </div>
         </div>
-        <h1>
-            Manhattan, Kansas
-        </h1>
-        <p class="time">as of 11:00 am</p>
-        <div class="current_temp_details">
-            <div class="current_temp">
-                <p class="temp_current">50°</p>
-                <p class="feels">feels like 48°</p>
-            </div>
-            <div class="details">
-                <p><b>Partly Cloudly</b></p>
-                <p>UV index <b>3 of 10</b></p>
-                <p>Wind <b>NNW 6MPH</b></p>
-                <p>Humidity <b>57%</b></p>
-                <p>Sunrise <b>7:14 am</b> Sunset <b>6:26 pm</b></p>
-                <p>Moon phase <b>Waning Gibbous</b></p>
-            </div>
-        </div>
-        <p class="alerts">There are no current alerts in your area</p>
-        <p class="days_title">DAILY</p>
-        <div class="days">
-            <div class="day">
-                <p class="day_details">monday</p>
-                <p class="day_high">62°</p>
-                <p class="day_low">57°</p>
-                <img src="asset3.png">
-                <p class="day_details"><b>Partly Cloudy</b></p>
-                <p class="day_details"><b>20% rain</b></p>
-                <p class="day_details"><b>8 UV</b></p>
-            </div>
-            <div class="day">
-                <p class="day_details">tuesday</p>
-                <p class="day_high">60°</p>
-                <p class="day_low">45°</p>
-                <img src="asset3.png">
-                <p class="day_details"><b>Partly Cloudy</b></p>
-                <p class="day_details"><b>30% rain</b></p>
-                <p class="day_details"><b>6 UV</b></p>
-            </div>
-            <div class="day">
-                <p class="day_details">wednesday</p>
-                <p class="day_high">60°</p>
-                <p class="day_low">45°</p>
-                <img src="asset1.png">
-                <p class="day_details"><b>Sunny</b></p>
-                <p class="day_details"><b>0% rain</b></p>
-                <p class="day_details"><b>4 UV</b></p>
-            </div>
-            <div class="day">
-                <p class="day_details">thursday</p>
-                <p class="day_high">68°</p>
-                <p class="day_low">50°</p>
-                <img src="asset3.png">
-                <p class="day_details"><b>Partly Cloudy</b></p>
-                <p class="day_details"><b>40% rain</b></p>
-                <p class="day_details"><b>6 UV</b></p>
-            </div>
-            <div class="day">
-                <p class="day_details">friday</p>
-                <p class="day_high">67°</p>
-                <p class="day_low">45°</p>
-                <img src="asset1.png">
-                <p class="day_details"><b>Sunny</b></p>
-                <p class="day_details"><b>0% rain</b></p>
-                <p class="day_details"><b>7 UV</b></p>
-            </div>
-            <div class="day">
-                <p class="day_details">saturday</p>
-                <p class="day_high">85°</p>
-                <p class="day_low">70°</p>
-                <img src="asset1.png">
-                <p class="day_details"><b>Sunny</b></p>
-                <p class="day_details"><b>0% rain</b></p>
-                <p class="day_details"><b>10 UV</b></p>
-            </div>
-            <div class="day">
-                <p class="day_details">sunday</p>
-                <p class="day_high">70°</p>
-                <p class="day_low">62°</p>
-                <img src="asset2.png">
-                <p class="day_details"><b>Rainy</b></p>
-                <p class="day_details"><b>70% rain</b></p>
-                <p class="day_details"><b>4 UV</b></p>
-            </div>
-        </div>
-        <p class="current_details_title">CURRENT DETAILS</p>
-        <div class="current_details">
-            <p>Visibility <b>10 miles</b></p>
-            <p>Pressure <b>30.26</b></p>
-            <p>Dew Point <b>35°</b></p>
-        </div>
-        <div id="map"></div>
-        <p class="hourly_title">HOURLY</p>
-        <div class="window">
-            <div class="hourly">
-                <div class="hourly_time">
-                    <p class="hour_times">12:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">1:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">2:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">3:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">4:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">5:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">6:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">7:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">8:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">9:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">10:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">11:00am</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="asset2.png">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-                <div class="hourly_time">
-                    <p class="hour_times">12:00pm</p>
-                    <p class="hour_high">60°</p>
-                    <p class="hour_low">45°</p>
-                    <div class="rain">
-                        <img src="">
-                        <p class="hour_rain">20%</p>
-                    </div>
-                </div>
-        </div>
-        </div>
 
 
 
 
-        <script src="/js/script.js" type="module"></script>
+        <script src="/js/script.js"></script>
     </body>
 </html>
