@@ -65,7 +65,8 @@
     font-weight: 600;
     font-size: 200px;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 0px;
     padding-right: 10px;
  }
 
@@ -136,15 +137,20 @@
 }
 
 .rain_drop {
-    background-image: url("/img/Asset\ 4.png");
+    background-image: url("/img/white.drop.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
 }
 
 .hourly_rain_drop {
-    background-image: url("/img/Asset\ 7.png");
+    background-image: url("/img/blue.drop.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .current_details {
@@ -221,4 +227,13 @@
     color: #5B618A;
     font-size: 12px;
     margin: auto;
+}
+
+.icon-01d {
+
+}
+
+.img {
+    max-height: 100%;
+    max-width: 100%;
 }

@@ -114,12 +114,13 @@
             <div class="current_temp_details">
                 <div class="current_temp">
                     <p class="temp_current">{{current.temp.current}}°</p>
-                    <p class="feels">feels like 48°</p>
+                    <!-- <p class="feels">feels like 48°</p> -->
                 </div>
                 <div class="details">
                     <p><b>{{current.description_main}}</b></p>
                     <p>UV index <b>{{forecast[0].uv}}</b></p>
                     <p>Wind <b>{{current.wind.speed}}</b></p>
+                    <p>Wind Direction <b>{{hourly[0].windDirection}}</b></p>
                     <p>Humidity <b>57%</b></p>
                     <p>Snow <b>{{forecast[0].snow}}%</b></p>
                     <p>Rain <b>{{forecast[0].precip}}%</b></p>
@@ -127,7 +128,7 @@
                     <p>Moon phase <b>{{time.moom}}</b></p>
                 </div>
             </div>
-            <p class="alerts">There are no current alerts in your area</p>
+            <!-- <p class="alerts">There are no current alerts in your area</p> -->
             <p class="days_title">DAILY</p>
             <div class="days">
                 <div class="day">
@@ -218,7 +219,7 @@
             <p class="current_details_title">CURRENT DETAILS</p>
             <div class="current_details">
                 <p>Visibility <b>{{forecast[0].vis}} miles</b></p>
-                <p>Pressure <b>{{forecast[0].pres}}mb</b></p>
+                <p>Pressure <b>{{forecast[0].pres}} mb</b></p>
                 <p>Dew Point <b>{{forecast[0].dewpt}}°</b></p>
             </div>
             <div id="map"></div>
@@ -329,6 +330,16 @@
                             <p class="hour_rain">20%</p>
                         </div>
                     </div> -->
+
+                    <div class="icon-01d"></div>
+                    <div class="icon-02d"></div>
+                    <div class="icon-03d"></div>
+                    <div class="icon-04d"></div>
+                    <div class="icon-09d"></div>
+                    <div class="icon-10d"></div>
+                    <div class="icon-13d"></div>
+                    <div class="icon-50d"></div>
+
             </div>
             </div>
         </div>
