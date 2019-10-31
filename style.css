@@ -198,6 +198,7 @@
 .hourly_time {
     color: #5B618A;
     border-right: 1px solid #5B618A;
+    margin-bottom: 10px;
 }
 
 .hour_times {
@@ -219,6 +220,7 @@
     grid-column-gap: ;
     width: 60px;
     margin: auto;
+    font-size: 8px;
 }
 
 .hour_rain {
